@@ -6,19 +6,37 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Umbrella Handbook',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			customCss: ['./src/styles/custom.css'],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Meta & Deal Room',
+					slug: 'meta',
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'People',
+					slug: 'people',
+				},
+				{
+					label: 'Fundraising',
+					slug: 'fundraising',
+				},
+				{
+					label: 'Sales',
+					slug: 'sales',
+				},
+				{
+					label: 'Operations',
+					slug: 'ops',
+				},
+				{
+					label: 'Design & Brand',
+					slug: 'brand',
+				},
+				{
+					label: 'Engineering',
+					slug: 'engineering',
 				},
 			],
 		}),
